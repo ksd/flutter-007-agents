@@ -13,13 +13,19 @@ class _AgentListState extends State<AgentList> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('007 Agenter'),
+        title: Text(
+          '007 Agenter',
+          style: Theme.of(context).textTheme.headline6,
+        ),
       ),
       body: SafeArea(
         child: ListView.builder(
           itemCount: Agent.list.length,
           itemBuilder: (BuildContext context, int index) {
-            return Text(Agent.list[index].name);
+            return Text(
+              Agent.list[index].name,
+              style: Theme.of(context).textTheme.headline1,
+            );
           },
         ),
       ),
