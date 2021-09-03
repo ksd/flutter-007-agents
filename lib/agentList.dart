@@ -1,3 +1,4 @@
+import 'package:agents/agentListCard.dart';
 import 'package:flutter/material.dart';
 import 'agent.dart';
 
@@ -22,10 +23,7 @@ class _AgentListState extends State<AgentList> {
         child: ListView.builder(
           itemCount: Agent.list.length,
           itemBuilder: (BuildContext context, int index) {
-            return Text(
-              Agent.list[index].name,
-              style: Theme.of(context).textTheme.headline1,
-            );
+            return AgentListCard();
           },
         ),
       ),
