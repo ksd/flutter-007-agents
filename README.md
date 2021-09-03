@@ -1,16 +1,9 @@
 # agents
 
-A new Flutter project.
+### 4. Semester datamatiker mobile
+Dette projekt er delt op i versioner som jeg vil referere til undervejs i undervisningen fra lektion 03 til 06
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Version 001 er 'first commit' som viser en simpel opbygning af en flutter app
+Version 002 er anden commit der viser anvendelsen af en tab-bar i bunden som navigation
