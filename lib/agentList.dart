@@ -23,7 +23,7 @@ class _AgentListState extends State<AgentList> {
         child: ListView.builder(
           itemCount: Agent.list.length,
           itemBuilder: (BuildContext context, int index) {
-            return AgentListCard();
+            return AgentListCard(agent: Agent.list[index]);
           },
         ),
       ),

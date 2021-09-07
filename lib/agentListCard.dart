@@ -1,23 +1,22 @@
+import 'package:agents/agent.dart';
 import 'package:flutter/material.dart';
 import 'agentTheme.dart';
 
 class AgentListCard extends StatelessWidget {
-  const AgentListCard({Key? key}) : super(key: key);
+  const AgentListCard({Key? key, required this.agent}) : super(key: key);
 
-  final String agent = 'Daniel Craig';
-  final String active = '2006 -';
-  final String latestMovie = 'No time to Die';
-  final String latestMovieYear = '2021';
+  final Agent agent;
 
   @override
   Widget build(BuildContext context) {
     return Center(
       child: Container(
         padding: const EdgeInsets.all(16),
+        margin: const EdgeInsets.only(bottom: 16),
         constraints: const BoxConstraints.expand(width: 350, height: 450),
-        decoration: const BoxDecoration(
+        decoration: BoxDecoration(
           image: DecorationImage(
-            image: AssetImage('assets/daniel_craig.png'),
+            image: AssetImage(agent.imageURL),
             fit: BoxFit.fitHeight,
           ),
           borderRadius: BorderRadius.all(Radius.circular(10.0)),
@@ -27,19 +26,19 @@ class AgentListCard extends StatelessWidget {
         child: Stack(
           children: [
             Text(
-              agent,
+              agent.name,
               style: AgentTheme.darkTextTheme.headline1,
             ),
             Positioned(
               child: Text(
-                active,
+                agent.active,
                 style: AgentTheme.darkTextTheme.headline2,
               ),
               top: 35,
             ),
             Positioned(
               child: Text(
-                latestMovie,
+                agent.latestMovie,
                 style: AgentTheme.darkTextTheme.headline2,
               ),
               bottom: 30,
@@ -47,7 +46,7 @@ class AgentListCard extends StatelessWidget {
             ),
             Positioned(
               child: Text(
-                latestMovieYear,
+                agent.latestMovieYear,
                 style: AgentTheme.darkTextTheme.headline3,
               ),
               bottom: 10,
