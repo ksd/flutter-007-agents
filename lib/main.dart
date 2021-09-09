@@ -14,7 +14,7 @@ class Agents extends StatelessWidget {
     return MaterialApp(
       title: 'Ian Flemmings Agents',
       theme: theme,
-      home: AgentList(),
+      home: const AgentList(),
     );
   }
 }

@@ -3,13 +3,33 @@ import 'package:flutter/material.dart';
 import 'agent.dart';
 
 class AgentList extends StatefulWidget {
-  AgentList({Key? key}) : super(key: key);
+  const AgentList({Key? key}) : super(key: key);
 
   @override
   _AgentListState createState() => _AgentListState();
 }
 
 class _AgentListState extends State<AgentList> {
+  // In order to use the bottom navigation bar
+  // we need to keep track of the selected tab
+  int _selectedIndex = 0;
+
+  // A list of pages to visit from the bottom navigation bar
+  static List<Widget> pages = <Widget>[
+    AgentListBuilderWidget(),
+    // TODO: Opgave 1: Lav en liste over 007 film
+    Container(color: Colors.green),
+  ];
+
+  // The function to be called when you tap on an
+  // bottom navigation bar item
+
+  void _onItemTapped(int index) {
+    setState(() {
+      _selectedIndex = index;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -20,13 +40,34 @@ class _AgentListState extends State<AgentList> {
         ),
       ),
       body: SafeArea(
-        child: ListView.builder(
-          itemCount: Agent.list.length,
-          itemBuilder: (BuildContext context, int index) {
-            return AgentListCard(agent: Agent.list[index]);
-          },
-        ),
+        child: pages[_selectedIndex],
       ),
+      bottomNavigationBar: BottomNavigationBar(
+        selectedItemColor: Theme.of(context).textSelectionTheme.selectionColor,
+        onTap: _onItemTapped,
+        items: <BottomNavigationBarItem>[
+          const BottomNavigationBarItem(
+              icon: Icon(Icons.person), label: 'Agents'),
+          const BottomNavigationBarItem(
+              icon: Icon(Icons.movie), label: 'Movies'),
+        ],
+      ),
+    );
+  }
+}
+
+class AgentListBuilderWidget extends StatelessWidget {
+  const AgentListBuilderWidget({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return ListView.builder(
+      itemCount: Agent.list.length,
+      itemBuilder: (BuildContext context, int index) {
+        return AgentListCard(agent: Agent.list[index]);
+      },
     );
   }
 }

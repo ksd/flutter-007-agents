@@ -37,7 +37,7 @@ class AgentTheme {
       primaryColor: Colors.white,
       accentColor: Colors.black,
       textSelectionTheme:
-          const TextSelectionThemeData(selectionColor: Colors.green),
+          const TextSelectionThemeData(selectionColor: Colors.black45),
       textTheme: lightTextTheme,
     );
   }
@@ -47,7 +47,7 @@ class AgentTheme {
     return ThemeData(
       brightness: Brightness.dark,
       primaryColor: Colors.grey[900],
-      accentColor: Colors.green[600],
+      accentColor: Colors.white,
       textTheme: darkTextTheme,
     );
   }
