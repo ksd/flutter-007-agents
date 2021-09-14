@@ -25,6 +25,7 @@ dependencies:
   flutter:
     sdk: flutter
   google_fonts: ^2.1.0
+  outlined_text: ^1.0.1
 
 dev_dependencies:
   flutter_test:
@@ -42,7 +43,7 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-    - assets/
+    - assets/agents/
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
   # An image asset can refer to one or more resolution-specific "variants", see

@@ -1,5 +1,6 @@
-import 'package:agents/agent.dart';
+import 'package:agents/model/agent.dart';
 import 'package:flutter/material.dart';
+import 'package:outlined_text/outlined_text.dart';
 import 'agentTheme.dart';
 
 class AgentListCard extends StatelessWidget {
@@ -23,36 +24,56 @@ class AgentListCard extends StatelessWidget {
           children: [
             Positioned(
               child: Image.asset(
-                agent.imageURL,
+                'assets/agents/${agent.imageURL}',
               ),
               top: 20,
             ),
             Positioned(
-              child: Text(
-                agent.name,
-                style: AgentTheme.darkTextTheme.headline2,
+              child: OutlinedText(
+                text: Text(
+                  agent.name,
+                  style: AgentTheme.darkTextTheme.headline2,
+                ),
+                strokes: [
+                  OutlinedTextStroke(color: Colors.black45, width: 3),
+                ],
               ),
               top: 0,
             ),
             Positioned(
-              child: Text(
-                agent.active,
-                style: AgentTheme.darkTextTheme.headline4,
+              child: OutlinedText(
+                text: Text(
+                  agent.active,
+                  style: AgentTheme.darkTextTheme.headline4,
+                ),
+                strokes: [
+                  OutlinedTextStroke(color: Colors.black45, width: 3),
+                ],
               ),
               top: 35,
             ),
             Positioned(
-              child: Text(
-                agent.latestMovie,
-                style: AgentTheme.darkTextTheme.headline3,
+              child: OutlinedText(
+                text: Text(
+                  agent.latestMovie,
+                  style: AgentTheme.darkTextTheme.headline3,
+                ),
+                strokes: [
+                  OutlinedTextStroke(color: Colors.black45, width: 3),
+                ],
               ),
               bottom: 30,
               right: 0,
             ),
             Positioned(
-              child: Text(
-                agent.latestMovieYear,
-                style: AgentTheme.darkTextTheme.headline4,
+              child: OutlinedText(
+                text: Text(
+                  agent.latestMovieYear,
+                  style: AgentTheme.darkTextTheme.headline4,
+                ),
+                strokes: [
+                  OutlinedTextStroke(color: Colors.black45, width: 3),
+                ],
               ),
               bottom: 10,
               right: 0,

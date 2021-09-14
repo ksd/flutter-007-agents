@@ -1,6 +1,6 @@
 import 'package:agents/agentListCard.dart';
 import 'package:flutter/material.dart';
-import 'agent.dart';
+import 'model/agent.dart';
 
 class AgentList extends StatefulWidget {
   const AgentList({Key? key}) : super(key: key);
@@ -17,7 +17,6 @@ class _AgentListState extends State<AgentList> {
   // A list of pages to visit from the bottom navigation bar
   static List<Widget> pages = <Widget>[
     AgentListBuilderWidget(),
-    // TODO: Opgave 1: Lav en liste over 007 film
     Container(color: Colors.green),
   ];
 
@@ -43,7 +42,7 @@ class _AgentListState extends State<AgentList> {
         child: pages[_selectedIndex],
       ),
       bottomNavigationBar: BottomNavigationBar(
-        selectedItemColor: Theme.of(context).textSelectionTheme.selectionColor,
+        currentIndex: _selectedIndex,
         onTap: _onItemTapped,
         items: <BottomNavigationBarItem>[
           const BottomNavigationBarItem(
