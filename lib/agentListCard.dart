@@ -17,7 +17,7 @@ class AgentListCard extends StatelessWidget {
         constraints: const BoxConstraints.expand(height: 250),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.all(Radius.circular(10.0)),
-          color: Colors.white70,
+          color: Colors.white54,
         ),
         // Now for the content
         child: Stack(

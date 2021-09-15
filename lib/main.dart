@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'agentTheme.dart';
-import 'agentList.dart';
+import 'home.dart';
 
 void main() {
   runApp(Agents());
@@ -14,7 +14,7 @@ class Agents extends StatelessWidget {
     return MaterialApp(
       title: 'Ian Flemmings Agents',
       theme: theme,
-      home: const AgentList(),
+      home: const Home(),
     );
   }
 }
