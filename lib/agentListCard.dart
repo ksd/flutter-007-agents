@@ -17,7 +17,7 @@ class AgentListCard extends StatelessWidget {
         constraints: const BoxConstraints.expand(height: 250),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.all(Radius.circular(10.0)),
-          color: Colors.white54,
+          color: ThemeData.light().backgroundColor,
         ),
         // Now for the content
         child: Stack(
@@ -47,7 +47,7 @@ class AgentListCard extends StatelessWidget {
                   style: AgentTheme.darkTextTheme.headline4,
                 ),
                 strokes: [
-                  OutlinedTextStroke(color: Colors.black45, width: 3),
+                  OutlinedTextStroke(color: Colors.black45, width: 1),
                 ],
               ),
               top: 35,
@@ -59,7 +59,7 @@ class AgentListCard extends StatelessWidget {
                   style: AgentTheme.darkTextTheme.headline3,
                 ),
                 strokes: [
-                  OutlinedTextStroke(color: Colors.black45, width: 3),
+                  OutlinedTextStroke(color: Colors.black45, width: 2),
                 ],
               ),
               bottom: 30,
@@ -72,7 +72,7 @@ class AgentListCard extends StatelessWidget {
                   style: AgentTheme.darkTextTheme.headline4,
                 ),
                 strokes: [
-                  OutlinedTextStroke(color: Colors.black45, width: 3),
+                  OutlinedTextStroke(color: Colors.black45, width: 1),
                 ],
               ),
               bottom: 10,

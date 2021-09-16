@@ -33,11 +33,11 @@ class AgentTheme {
   // 3
   static ThemeData light() {
     return ThemeData(
-      brightness: Brightness.light,
-      primaryColor: Colors.white,
-      accentColor: Colors.black,
-      textSelectionTheme:
-          const TextSelectionThemeData(selectionColor: Colors.black45),
+      colorScheme: ColorScheme.fromSwatch(
+        primarySwatch: Colors.grey,
+      ).copyWith(
+        secondary: Colors.black,
+      ),
       textTheme: lightTextTheme,
     );
   }
@@ -45,9 +45,11 @@ class AgentTheme {
   // 4
   static ThemeData dark() {
     return ThemeData(
-      brightness: Brightness.dark,
-      primaryColor: Colors.grey[900],
-      accentColor: Colors.white,
+      colorScheme: ColorScheme.fromSwatch(
+        primarySwatch: Colors.red,
+      ).copyWith(
+        secondary: Colors.white,
+      ),
       textTheme: darkTextTheme,
     );
   }

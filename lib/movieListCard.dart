@@ -17,7 +17,7 @@ class MovieListCard extends StatelessWidget {
         constraints: const BoxConstraints.expand(height: 250),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.all(Radius.circular(10.0)),
-          color: Colors.white,
+          color: ThemeData.light().backgroundColor,
         ),
         // Now for the content
         child: Stack(
