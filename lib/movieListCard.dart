@@ -42,6 +42,18 @@ class MovieListCard extends StatelessWidget {
               ),
               top: 0,
             ),
+            Positioned(
+              child: OutlinedText(
+                text: Text(
+                  movie.agent.name,
+                  style: AgentTheme.darkTextTheme.headline2,
+                ),
+                strokes: [
+                  OutlinedTextStroke(color: Colors.black45, width: 3),
+                ],
+              ),
+              bottom: 0,
+            )
           ],
         ),
       ),
